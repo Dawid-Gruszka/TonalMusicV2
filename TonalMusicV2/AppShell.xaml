@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TonalMusicV2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TonalMusicV2"
+    xmlns:pages="clr-namespace:TonalMusicV2.Pages"
+    Shell.FlyoutBehavior="Flyout"
+    Title="TonalMusicV2">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="Albums"
+        ContentTemplate="{DataTemplate pages:AlbumPage}"
+        Route="AlbumPage" />
+    <ShellContent
+        Title="Artists"
+        ContentTemplate="{DataTemplate pages:ArtistPage}"
+        Route="ArtistPage" />
+
+    <ShellContent
+        Title="Songs"
+        ContentTemplate="{DataTemplate pages:SongPage}"
+        Route="SongPage" />
+
+    <ShellContent
+        Title="About"
+        ContentTemplate="{DataTemplate pages:About}"
+        Route="About" />
+
+    <ShellContent
+        Title="Settings"
+        ContentTemplate="{DataTemplate pages:SettingsPage}"
+        Route="SettingsPage" />
+
+</Shell>

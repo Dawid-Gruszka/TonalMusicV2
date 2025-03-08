@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TonalMusicV2.Pages.About"
+             Title="About">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20" HorizontalOptions="Center">
+            
+            <Label Text="Dawid Gruszka" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" TextColor="{DynamicResource PrimaryTextColor}"/>
+
+            <Label Text="2ºDAM" FontSize="18" HorizontalOptions="Center" TextColor="{DynamicResource SecondaryTextColor}"/>
+
+            <Label Text="Año 2024/25" FontSize="18" HorizontalOptions="Center" TextColor="{DynamicResource SecondaryTextColor}"/>
+
+            <Label Text="Desarrollador de aplicaciones multiplataforma con pasión por la música y la tecnología." FontSize="16" HorizontalOptions="Center" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" MaxLines="3" LineBreakMode="WordWrap"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

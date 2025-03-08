@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TonalMusicV2.Pages.AlbumPage"
+             Title="{Binding Album.Title}">
+
+    <ScrollView>
+        <Grid Padding="20" RowSpacing="15" ColumnSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+
+            <Image Source="{Binding Album.Picture}" Aspect="AspectFit" HeightRequest="200" HorizontalOptions="Center" Grid.Row="0" />
+            
+            <Label Text="{Binding Album.Title}" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="1" />
+            
+            <Label Text="{Binding Album.Year, StringFormat='Año: {0}'}" FontSize="18" HorizontalOptions="Center" Grid.Row="2" />
+            
+            <Label Text="{Binding Album.Artist.Name, StringFormat='Artista: {0}'}" FontSize="18" HorizontalOptions="Center" Grid.Row="3" />
+
+            <CollectionView ItemsSource="{Binding Album.Songs}"
+                            Grid.Row="4">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding Title}" TextColor="Wheat" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>
