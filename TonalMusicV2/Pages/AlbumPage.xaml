@@ -23,15 +23,24 @@
             
             <Label Text="{Binding Album.Artist.Name, StringFormat='Artista: {0}'}" FontSize="18" HorizontalOptions="Center" Grid.Row="3" />
 
-            <CollectionView ItemsSource="{Binding Album.Songs}"
-                            Grid.Row="4">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Label Text="{Binding Title}" TextColor="Wheat" />
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-
+            <ScrollView Margin="0,10,0,0" Orientation="Vertical" Grid.Row="4">
+                <CollectionView ItemsSource="{Binding Album.Songs}" SelectionMode="Single"
+                        SelectionChangedCommand="{Binding ClickSongCommand}"
+                        SelectionChangedCommandParameter="{Binding SelectedItem, Source={RelativeSource Self}}">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="0" CornerRadius="10" HasShadow="True" HeightRequest="50" VerticalOptions="Center">
+                                <VerticalStackLayout VerticalOptions="Start">
+                                    <Label Text="{Binding Title}" FontSize="15" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                </VerticalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
         </Grid>
     </ScrollView>
 </ContentPage>

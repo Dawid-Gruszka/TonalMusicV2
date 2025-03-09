@@ -6,11 +6,41 @@
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
 
-            <Border><Image Source="{Binding Artista.ArtistLogo}"  Aspect="AspectFit" HeightRequest="100" HorizontalOptions="Center" />
-            </Border>
+            <Grid Padding="20" RowSpacing="15" ColumnSpacing="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
 
-            <Label Text="{Binding Artista.Name}" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+                <Border Grid.Row="0">
+                    <Image Source="{Binding Artista.ArtistLogo}"  Aspect="AspectFit" HeightRequest="100" HorizontalOptions="Center" />
+                </Border>
 
+                <Label Text="{Binding Artista.Name}" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="1" />
+
+                <ScrollView Margin="0,30,0,0" Orientation="Horizontal" Grid.Row="2">
+                    <CollectionView ItemsSource="{Binding Artista.Albums}" SelectionMode="Single"
+                    SelectionChangedCommand="{Binding ClickAlbumCommand}"
+                    SelectionChangedCommandParameter="{Binding SelectedItem, Source={RelativeSource Self}}">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Padding="5" CornerRadius="15" HasShadow="True" WidthRequest="190" HeightRequest="220" BackgroundColor="White" BorderColor="#E0E0E0">
+                                    <VerticalStackLayout>
+                                        <Frame CornerRadius="15" Padding="0" HasShadow="False">
+                                            <Image Source="{Binding Picture}" HeightRequest="160" WidthRequest="160" Aspect="AspectFill"/>
+                                        </Frame>
+                                        <Label Text="{Binding Title}" FontSize="16" FontAttributes="Bold" TextColor="#333" HorizontalTextAlignment="Center" Margin="5,10,5,0"/>
+                                    </VerticalStackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </ScrollView>
+            </Grid>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -9,7 +9,7 @@ namespace TonalMusicV2.Rest
     {
         HttpClient _client;
         JsonSerializerOptions _serializerOptions;
-        readonly String URI = "http://localhost:8080";
+        readonly String URI = "http://192.168.1.147:8080";
 
         public List<Album> Albums { get; set; }
         public List<Artist> Artists { get; set; }

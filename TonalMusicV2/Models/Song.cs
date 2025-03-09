@@ -10,6 +10,6 @@
             public int? AlbumId { get; set; }
             public int? GenreId { get; set; }
             public int Id { get; set; }
-            public string FullFileUrl => $"http://localhost:8080{File}";
+            public string FullFileUrl => $"http://192.168.1.147:8080{File}";
     }
 }

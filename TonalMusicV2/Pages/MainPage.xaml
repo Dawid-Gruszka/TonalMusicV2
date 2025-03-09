@@ -4,12 +4,12 @@
              x:Class="TonalMusicV2.MainPage"
              xmlns:p="clr-namespace:TonalMusicV2.Resources.Languages"
              Title="{x:Static p:AppResources.Bienvenido_a_Tonal}">
+    <ScrollView>
     <Grid>
-
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="320"></RowDefinition>
+            <RowDefinition Height="320"></RowDefinition>
+            <RowDefinition Height="260"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <Grid.RowDefinitions>
@@ -29,10 +29,12 @@
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Frame Padding="0" CornerRadius="10" HasShadow="True" WidthRequest="150" HeightRequest="200">
+                                <Frame Padding="5" CornerRadius="15" HasShadow="True" WidthRequest="190" HeightRequest="220" BackgroundColor="White" BorderColor="#E0E0E0">
                                     <VerticalStackLayout>
-                                        <Image Source="{Binding ArtistLogo}" HeightRequest="150" WidthRequest="150" Aspect="AspectFill"/>
-                                        <Label Text="{Binding Name}" FontSize="14" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                        <Frame CornerRadius="15" Padding="0" HasShadow="False">
+                                            <Image Source="{Binding ArtistLogo}" HeightRequest="160" WidthRequest="160" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Center" />
+                                        </Frame>
+                                        <Label Text="{Binding Name}" FontSize="16" FontAttributes="Bold" TextColor="#333" HorizontalTextAlignment="Center" Margin="5,10,5,0" />
                                     </VerticalStackLayout>
                                 </Frame>
                             </DataTemplate>
@@ -60,10 +62,12 @@
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Frame Padding="0" CornerRadius="10" HasShadow="True" WidthRequest="150" HeightRequest="200">
+                                    <Frame Padding="5" CornerRadius="15" HasShadow="True" WidthRequest="190" HeightRequest="220" BackgroundColor="White" BorderColor="#E0E0E0">
                                     <VerticalStackLayout>
-                                        <Image Source="{Binding Picture}" HeightRequest="150" WidthRequest="150" Aspect="AspectFill"/>
-                                        <Label Text="{Binding Title}" FontSize="14" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                        <Frame CornerRadius="15" Padding="0" HasShadow="False">
+                                            <Image Source="{Binding Picture}" HeightRequest="160" WidthRequest="160" Aspect="AspectFill"/>
+                                        </Frame>
+                                        <Label Text="{Binding Title}" FontSize="16" FontAttributes="Bold" TextColor="#333" HorizontalTextAlignment="Center" Margin="5,10,5,0"/>
                                     </VerticalStackLayout>
                                 </Frame>
                             </DataTemplate>
@@ -90,9 +94,9 @@
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Frame Padding="0" CornerRadius="10" HasShadow="True" WidthRequest="150" HeightRequest="200">
-                                    <VerticalStackLayout>
-                                        <Label Text="{Binding Title}" FontSize="14" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                <Frame Padding="0" CornerRadius="10" HasShadow="True" WidthRequest="150" HeightRequest="160" VerticalOptions="Center">
+                                    <VerticalStackLayout VerticalOptions="Center">
+                                        <Label Text="{Binding Title}" FontSize="14" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                                     </VerticalStackLayout>
                                 </Frame>
                             </DataTemplate>
@@ -102,4 +106,5 @@
             </Grid>
         </Grid>
     </Grid>
+    </ScrollView>
 </ContentPage>

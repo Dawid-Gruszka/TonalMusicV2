@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using TonalMusicV2.Models;
 using TonalMusicV2.Service;
 
@@ -23,6 +24,17 @@ namespace TonalMusicV2.PageModels
         public ArtistPageModel(ArtistService artistService)
         {
             _artistService = artistService;
+        }
+
+        [RelayCommand]
+        public async Task ClickAlbum(Album album)
+        {
+            await NavigateToAsync($"///AlbumPage?id={album.Id}");
+        }
+
+        private async Task NavigateToAsync(string url)
+        {
+            await Shell.Current.GoToAsync(url);
         }
 
         private async Task LoadArtistAsync(int id)

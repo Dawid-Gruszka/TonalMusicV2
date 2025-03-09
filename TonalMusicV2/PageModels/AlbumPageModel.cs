@@ -1,4 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using TonalMusic.Models;
 using TonalMusicV2.Models;
 using TonalMusicV2.Service;
 
@@ -22,6 +24,12 @@ namespace TonalMusicV2.PageModels
         [ObservableProperty]
         private Album album;
 
+        [RelayCommand]
+        public async Task ClickSong(Song song)
+        {
+            await NavigateToAsync($"///SongPage?id={song.Id}");
+        }
+
         partial void OnAlbumIdChanged(int value)
         {
             _ = LoadAlbumAsync(value);
@@ -34,6 +42,11 @@ namespace TonalMusicV2.PageModels
                 {
                     Album = album;
                 }
+        }
+
+        private async Task NavigateToAsync(string url)
+        {
+            await Shell.Current.GoToAsync(url);
         }
     }
 }

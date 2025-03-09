@@ -9,5 +9,7 @@
         public string ArtistThumbnail { get; set; }
         public string ArtistBanner { get; set; }
         public int Id { get; set; }
+
+        public Album[] Albums { get; set; }
     }
 }
