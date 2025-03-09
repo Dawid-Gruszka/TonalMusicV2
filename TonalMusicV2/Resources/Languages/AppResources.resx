@@ -126,6 +126,9 @@
   <data name="Artistas" xml:space="preserve">
     <value>Artist</value>
   </data>
+  <data name="Año" xml:space="preserve">
+    <value>Year 2024/25</value>
+  </data>
   <data name="Bienvenido a Tonal" xml:space="preserve">
     <value>Welcome To Tonal</value>
   </data>
@@ -137,5 +140,8 @@
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
+  </data>
+  <data name="TextoAbout" xml:space="preserve">
+    <value>Cross-platform app developer with a passion for music and technology</value>
   </data>
 </root>

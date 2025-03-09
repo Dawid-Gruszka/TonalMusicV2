@@ -79,6 +79,15 @@ namespace TonalMusicV2.Resources.Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Year 2024/25.
+        /// </summary>
+        public static string Año {
+            get {
+                return ResourceManager.GetString("Año", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Artist.
         /// </summary>
         public static string Artistas {
@@ -120,6 +129,15 @@ namespace TonalMusicV2.Resources.Languages {
         public static string Settings {
             get {
                 return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cross-platform app developer with a passion for music and technology.
+        /// </summary>
+        public static string TextoAbout {
+            get {
+                return ResourceManager.GetString("TextoAbout", resourceCulture);
             }
         }
     }
