@@ -9,6 +9,8 @@ namespace TonalMusicV2.PageModels
     {
         private readonly SongService _songService;
 
+        private int lastId = -1;
+
         [ObservableProperty]
         private int _songId;
 
@@ -17,7 +19,12 @@ namespace TonalMusicV2.PageModels
 
         partial void OnSongIdChanged(int value)
         {
-            _ = LoadSongAsync(value);
+            if (lastId == -1 || value != lastId)
+            {
+                _ = LoadSongAsync(value);
+                lastId = value;
+            }
+            
         }
 
         public SongPageModel(SongService songService)
