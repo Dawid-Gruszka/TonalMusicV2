@@ -43,7 +43,15 @@ namespace TonalMusicV2.PageModels
             {
                 Preferences.Set(LanguagePreferenceKey, value);
                 ApplyLanguage(value);
+                ReloadShell();
             }
+        }
+
+        private void ReloadShell()
+        {
+            var current = Application.Current.MainPage;
+            Application.Current.MainPage = new AppShell();
+            current.Handler?.DisconnectHandler();
         }
 
         private void ApplyLanguage(string language)

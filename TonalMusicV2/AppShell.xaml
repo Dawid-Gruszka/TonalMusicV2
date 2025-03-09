@@ -5,35 +5,36 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:TonalMusicV2"
     xmlns:pages="clr-namespace:TonalMusicV2.Pages"
+    xmlns:p="clr-namespace:TonalMusicV2.Resources.Languages"
     Shell.FlyoutBehavior="Flyout"
     Title="TonalMusicV2">
 
     <ShellContent
-        Title="Home"
+        Title="{x:Static p:AppResources.Home}"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
     <ShellContent
-        Title="Albums"
+        Title="{x:Static p:AppResources.Albumes}"
         ContentTemplate="{DataTemplate pages:AlbumPage}"
         Route="AlbumPage" />
     <ShellContent
-        Title="Artists"
+        Title="{x:Static p:AppResources.Artistas}"
         ContentTemplate="{DataTemplate pages:ArtistPage}"
         Route="ArtistPage" />
 
     <ShellContent
-        Title="Songs"
+        Title="{x:Static p:AppResources.Canciones}"
         ContentTemplate="{DataTemplate pages:SongPage}"
         Route="SongPage" />
 
     <ShellContent
-        Title="About"
+        Title="{x:Static p:AppResources.About}"
         ContentTemplate="{DataTemplate pages:About}"
         Route="About" />
 
     <ShellContent
-        Title="Settings"
+        Title="{x:Static p:AppResources.Settings}"
         ContentTemplate="{DataTemplate pages:SettingsPage}"
         Route="SettingsPage" />
 

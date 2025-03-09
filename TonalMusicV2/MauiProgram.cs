@@ -26,7 +26,7 @@ namespace TonalMusicV2
             builder.Services.AddTransient<AlbumPage>();
             builder.Services.AddTransient<ArtistPage>();
             builder.Services.AddSingleton<SongPage>();
-            builder.Services.AddTransient<SettingsPage>();
+            builder.Services.AddSingleton<SettingsPage>();
             builder.Services.AddScoped<SettingsPageModel>();
             builder.Services.AddSingleton<SongPageModel>();
             builder.Services.AddScoped<ArtistService>();

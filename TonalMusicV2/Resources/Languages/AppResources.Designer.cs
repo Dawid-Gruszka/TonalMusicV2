@@ -61,6 +61,15 @@ namespace TonalMusicV2.Resources.Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a About.
+        /// </summary>
+        public static string About {
+            get {
+                return ResourceManager.GetString("About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Album.
         /// </summary>
         public static string Albumes {
@@ -93,6 +102,24 @@ namespace TonalMusicV2.Resources.Languages {
         public static string Canciones {
             get {
                 return ResourceManager.GetString("Canciones", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Home.
+        /// </summary>
+        public static string Home {
+            get {
+                return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Settings.
+        /// </summary>
+        public static string Settings {
+            get {
+                return ResourceManager.GetString("Settings", resourceCulture);
             }
         }
     }
