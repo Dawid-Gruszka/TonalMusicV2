@@ -32,8 +32,8 @@
                                 <Frame Padding="5" CornerRadius="15" HasShadow="True" WidthRequest="190" HeightRequest="220" BackgroundColor="White" BorderColor="#E0E0E0">
                                     <VerticalStackLayout>
                                         <Frame CornerRadius="15" Padding="0" HasShadow="False">
-                                            <Image Source="{Binding ArtistLogo}" HeightRequest="160" WidthRequest="160" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Center" />
-                                        </Frame>
+                                                <Image Source="{Binding ArtistThumbnail}" HeightRequest="160" WidthRequest="160" Aspect="AspectFill"/>
+                                            </Frame>
                                         <Label Text="{Binding Name}" FontSize="16" FontAttributes="Bold" TextColor="#333" HorizontalTextAlignment="Center" Margin="5,10,5,0" />
                                     </VerticalStackLayout>
                                 </Frame>

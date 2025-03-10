@@ -1,4 +1,5 @@
-﻿using System.Net.Http.Json;
+﻿using System.Diagnostics;
+using System.Net.Http.Json;
 using System.Text.Json;
 using TonalMusic.Models;
 using TonalMusicV2.Models;
@@ -9,7 +10,7 @@ namespace TonalMusicV2.Rest
     {
         HttpClient _client;
         JsonSerializerOptions _serializerOptions;
-        readonly String URI = "http://192.168.1.147:8080";
+        readonly String URI = "http://192.168.16.10:8080";
 
         public List<Album> Albums { get; set; }
         public List<Artist> Artists { get; set; }

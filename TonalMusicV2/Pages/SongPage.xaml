@@ -14,7 +14,7 @@
 
         <Label Text="{Binding Songs.Year}" FontSize="18" HorizontalOptions="Center" />
         
-        <toolkit:MediaElement Source="{Binding Songs.FullFileUrl}" ShouldShowPlaybackControls="True" HorizontalOptions="Fill"  />
+        <toolkit:MediaElement Source="{Binding Songs.File}" ShouldShowPlaybackControls="True" HorizontalOptions="Fill"  />
 
 
     </StackLayout>
